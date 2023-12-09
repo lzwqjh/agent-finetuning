@@ -1,0 +1,132 @@
+2023-09-20 10:26:49,295 INFO    StreamThr :2687343 [internal.py:wandb_internal():86] W&B internal server running at pid: 2687343, started at: 2023-09-20 10:26:49.294372
+2023-09-20 10:26:49,297 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status
+2023-09-20 10:26:49,311 INFO    WriterThread:2687343 [datastore.py:open_for_write():85] open: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/run-c7hn4v2e.wandb
+2023-09-20 10:26:49,312 DEBUG   SenderThread:2687343 [sender.py:send():379] send: header
+2023-09-20 10:26:49,320 DEBUG   SenderThread:2687343 [sender.py:send():379] send: run
+2023-09-20 10:26:50,333 INFO    SenderThread:2687343 [dir_watcher.py:__init__():211] watching files in: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/files
+2023-09-20 10:26:50,334 INFO    SenderThread:2687343 [sender.py:_start_run_threads():1121] run started: c7hn4v2e with start time 1695176809.296169
+2023-09-20 10:26:50,339 DEBUG   SenderThread:2687343 [sender.py:send_request():406] send_request: summary_record
+2023-09-20 10:26:50,339 INFO    SenderThread:2687343 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-20 10:26:50,358 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: check_version
+2023-09-20 10:26:50,359 DEBUG   SenderThread:2687343 [sender.py:send_request():406] send_request: check_version
+2023-09-20 10:26:51,336 INFO    Thread-12 :2687343 [dir_watcher.py:_on_file_created():271] file/dir created: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/files/wandb-summary.json
+2023-09-20 10:26:55,359 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: keepalive
+2023-09-20 10:26:55,361 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:26:55,415 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: run_start
+2023-09-20 10:26:55,440 DEBUG   HandlerThread:2687343 [system_info.py:__init__():31] System info init
+2023-09-20 10:26:55,441 DEBUG   HandlerThread:2687343 [system_info.py:__init__():46] System info init done
+2023-09-20 10:26:55,441 INFO    HandlerThread:2687343 [system_monitor.py:start():181] Starting system monitor
+2023-09-20 10:26:55,441 INFO    SystemMonitor:2687343 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-09-20 10:26:55,441 INFO    HandlerThread:2687343 [system_monitor.py:probe():201] Collecting system info
+2023-09-20 10:26:55,443 INFO    SystemMonitor:2687343 [interfaces.py:start():190] Started cpu monitoring
+2023-09-20 10:26:55,444 INFO    SystemMonitor:2687343 [interfaces.py:start():190] Started disk monitoring
+2023-09-20 10:26:55,445 INFO    SystemMonitor:2687343 [interfaces.py:start():190] Started gpu monitoring
+2023-09-20 10:26:55,446 INFO    SystemMonitor:2687343 [interfaces.py:start():190] Started memory monitoring
+2023-09-20 10:26:55,448 INFO    SystemMonitor:2687343 [interfaces.py:start():190] Started network monitoring
+2023-09-20 10:26:55,530 DEBUG   HandlerThread:2687343 [system_info.py:probe():195] Probing system
+2023-09-20 10:26:55,533 DEBUG   HandlerThread:2687343 [system_info.py:_probe_git():180] Probing git
+2023-09-20 10:26:55,542 DEBUG   HandlerThread:2687343 [system_info.py:_probe_git():188] Probing git done
+2023-09-20 10:26:55,542 DEBUG   HandlerThread:2687343 [system_info.py:probe():240] Probing system done
+2023-09-20 10:26:55,542 DEBUG   HandlerThread:2687343 [system_monitor.py:probe():210] {'os': 'Linux-5.15.0-68-generic-x86_64-with-glibc2.35', 'python': '3.10.13', 'heartbeatAt': '2023-09-20T02:26:55.530752', 'startedAt': '2023-09-20T02:26:49.282285', 'docker': None, 'cuda': None, 'args': ('--model_type', 'llama', '--template', 'chinese_llama2_alpaca', '--model_name_or_path', '/models/llama2-7b-chat-hf', '--dataset_dir', '/data/zqh/LLM-RLHF-Tuning/sft_data', '--split_ratio', '0.01', '--data_cache_dir', './sft_data/cache/data', '--block_size', '512', '--per_device_train_batch_size', '1', '--per_device_eval_batch_size', '1', '--dataloader_num_workers', '16', '--gradient_accumulation_steps', '128', '--do_train', '--do_eval', '--seed', '512', '--fp16', '--num_train_epochs', '1', '--max_prompt_length', '512', '--max_response_length', '512', '--logging_steps', '100', '--eval_steps', '100', '--save_steps', '500', '--learning_rate', '1e-4', '--lr_scheduler_type', 'cosine', '--warmup_ratio', '0.03', '--weight_decay', '0', '--logging_strategy', 'steps', '--save_strategy', 'steps', '--evaluation_strategy', 'steps', '--save_total_limit', '1', '--output_dir', 'sft_model_path', '--overwrite_output_dir', '--ddp_timeout', '30000', '--logging_first_step', 'True', '--lora_rank', '64', '--lora_alpha', '32', '--lora_target', 'q_proj,v_proj,k_proj,o_proj,gate_proj,down_proj,up_proj', '--lora_dropout', '0.05', '--torch_dtype', 'float16', '--report_to', 'wandb'), 'state': 'running', 'program': '/data/zqh/LLM-RLHF-Tuning/script/sft/run_sft_with_peft.py', 'codePath': 'script/sft/run_sft_with_peft.py', 'git': {'remote': 'https://github.com/Joyce94/LLM-RLHF-Tuning.git', 'commit': '5b02ef25742c0da31b88e74a2599532d8137fe4e'}, 'email': None, 'root': '/data/zqh/LLM-RLHF-Tuning', 'host': 'haiv-hpc-7049GP-TRT-4', 'username': 'zqh', 'executable': '/data/zqh/.conda/envs/sft/bin/python', 'cpu_count': 40, 'cpu_count_logical': 80, 'cpu_freq': {'current': 1173.7500375, 'min': 1000.0, 'max': 3000.0}, 'cpu_freq_per_core': [{'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1900.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1900.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 3000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1900.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 2800.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 2800.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1312.663, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1900.0, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}, {'current': 2799.999, 'min': 1000.0, 'max': 3000.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3000.0}], 'disk': {'total': 881.8412857055664, 'used': 726.2998275756836}, 'gpu': 'NVIDIA GeForce RTX 3090', 'gpu_count': 4, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 3090', 'memory_total': 25769803776}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}], 'memory': {'total': 251.54674530029297}}
+2023-09-20 10:26:55,543 INFO    HandlerThread:2687343 [system_monitor.py:probe():211] Finished collecting system info
+2023-09-20 10:26:55,543 INFO    HandlerThread:2687343 [system_monitor.py:probe():214] Publishing system info
+2023-09-20 10:26:55,543 DEBUG   HandlerThread:2687343 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-09-20 10:26:55,543 DEBUG   HandlerThread:2687343 [system_info.py:_save_pip():67] Saving pip packages done
+2023-09-20 10:26:55,543 DEBUG   HandlerThread:2687343 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-09-20 10:26:56,335 INFO    Thread-12 :2687343 [dir_watcher.py:_on_file_created():271] file/dir created: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/files/conda-environment.yaml
+2023-09-20 10:26:56,336 INFO    Thread-12 :2687343 [dir_watcher.py:_on_file_created():271] file/dir created: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/files/requirements.txt
+2023-09-20 10:26:59,643 DEBUG   HandlerThread:2687343 [system_info.py:_save_conda():86] Saving conda packages done
+2023-09-20 10:26:59,646 INFO    HandlerThread:2687343 [system_monitor.py:probe():216] Finished publishing system info
+2023-09-20 10:26:59,650 DEBUG   SenderThread:2687343 [sender.py:send():379] send: files
+2023-09-20 10:26:59,650 INFO    SenderThread:2687343 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2023-09-20 10:26:59,661 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-20 10:26:59,661 DEBUG   SenderThread:2687343 [sender.py:send_request():406] send_request: stop_status
+2023-09-20 10:27:00,209 DEBUG   SenderThread:2687343 [sender.py:send():379] send: telemetry
+2023-09-20 10:27:00,209 DEBUG   SenderThread:2687343 [sender.py:send():379] send: config
+2023-09-20 10:27:00,210 DEBUG   SenderThread:2687343 [sender.py:send():379] send: metric
+2023-09-20 10:27:00,210 DEBUG   SenderThread:2687343 [sender.py:send():379] send: telemetry
+2023-09-20 10:27:00,210 DEBUG   SenderThread:2687343 [sender.py:send():379] send: metric
+2023-09-20 10:27:00,210 WARNING SenderThread:2687343 [sender.py:send_metric():1326] Seen metric with glob (shouldn't happen)
+2023-09-20 10:27:00,337 INFO    Thread-12 :2687343 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/files/conda-environment.yaml
+2023-09-20 10:27:00,337 INFO    Thread-12 :2687343 [dir_watcher.py:_on_file_created():271] file/dir created: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/files/output.log
+2023-09-20 10:27:00,337 INFO    Thread-12 :2687343 [dir_watcher.py:_on_file_created():271] file/dir created: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/files/wandb-metadata.json
+2023-09-20 10:27:00,782 INFO    wandb-upload_0:2687343 [upload_job.py:push():131] Uploaded file /tmp/tmpfa5g4blxwandb/z8n0ugd1-wandb-metadata.json
+2023-09-20 10:27:01,244 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:27:02,338 INFO    Thread-12 :2687343 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/files/output.log
+2023-09-20 10:27:06,245 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:27:11,246 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:27:14,662 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-20 10:27:14,663 DEBUG   SenderThread:2687343 [sender.py:send_request():406] send_request: stop_status
+2023-09-20 10:27:16,997 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:27:22,003 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:27:23,349 INFO    Thread-12 :2687343 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/files/config.yaml
+2023-09-20 10:27:27,485 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:27:29,662 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-20 10:27:29,663 DEBUG   SenderThread:2687343 [sender.py:send_request():406] send_request: stop_status
+2023-09-20 10:27:32,942 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:27:37,955 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:27:42,959 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:27:44,663 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-20 10:27:44,664 DEBUG   SenderThread:2687343 [sender.py:send_request():406] send_request: stop_status
+2023-09-20 10:27:48,018 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:27:51,133 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: partial_history
+2023-09-20 10:27:51,138 DEBUG   SenderThread:2687343 [sender.py:send():379] send: metric
+2023-09-20 10:27:51,139 DEBUG   SenderThread:2687343 [sender.py:send():379] send: metric
+2023-09-20 10:27:51,139 DEBUG   SenderThread:2687343 [sender.py:send():379] send: metric
+2023-09-20 10:27:51,139 DEBUG   SenderThread:2687343 [sender.py:send():379] send: history
+2023-09-20 10:27:51,140 DEBUG   SenderThread:2687343 [sender.py:send_request():406] send_request: summary_record
+2023-09-20 10:27:51,142 INFO    SenderThread:2687343 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-09-20 10:27:51,414 INFO    Thread-12 :2687343 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/files/wandb-summary.json
+2023-09-20 10:27:52,415 INFO    Thread-12 :2687343 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/files/output.log
+2023-09-20 10:27:53,160 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:27:53,416 INFO    Thread-12 :2687343 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/files/output.log
+2023-09-20 10:27:54,417 INFO    Thread-12 :2687343 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/files/config.yaml
+2023-09-20 10:27:55,449 DEBUG   SystemMonitor:2687343 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-09-20 10:27:55,452 DEBUG   SenderThread:2687343 [sender.py:send():379] send: stats
+2023-09-20 10:27:59,455 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:27:59,664 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-20 10:27:59,665 DEBUG   SenderThread:2687343 [sender.py:send_request():406] send_request: stop_status
+2023-09-20 10:28:05,017 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:28:10,017 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:28:14,664 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-20 10:28:14,665 DEBUG   SenderThread:2687343 [sender.py:send_request():406] send_request: stop_status
+2023-09-20 10:28:15,942 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:28:20,942 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:28:25,455 DEBUG   SenderThread:2687343 [sender.py:send():379] send: stats
+2023-09-20 10:28:26,457 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:28:29,665 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-20 10:28:29,666 DEBUG   SenderThread:2687343 [sender.py:send_request():406] send_request: stop_status
+2023-09-20 10:28:32,016 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:28:37,016 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:28:42,036 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:28:42,443 INFO    Thread-12 :2687343 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/files/output.log
+2023-09-20 10:28:44,664 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-20 10:28:44,665 DEBUG   SenderThread:2687343 [sender.py:send_request():406] send_request: stop_status
+2023-09-20 10:28:48,017 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:28:53,018 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:28:55,458 DEBUG   SenderThread:2687343 [sender.py:send():379] send: stats
+2023-09-20 10:28:58,460 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:28:59,665 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-20 10:28:59,667 DEBUG   SenderThread:2687343 [sender.py:send_request():406] send_request: stop_status
+2023-09-20 10:29:03,997 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:29:08,998 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:29:13,999 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:29:14,665 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-20 10:29:14,666 DEBUG   SenderThread:2687343 [sender.py:send_request():406] send_request: stop_status
+2023-09-20 10:29:19,025 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:29:24,026 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:29:25,461 DEBUG   SenderThread:2687343 [sender.py:send():379] send: stats
+2023-09-20 10:29:29,464 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:29:29,664 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-20 10:29:29,665 DEBUG   SenderThread:2687343 [sender.py:send_request():406] send_request: stop_status
+2023-09-20 10:29:33,471 INFO    Thread-12 :2687343 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20230920_102649-c7hn4v2e/files/output.log
+2023-09-20 10:29:35,183 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:29:40,185 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:29:44,665 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: stop_status
+2023-09-20 10:29:44,666 DEBUG   SenderThread:2687343 [sender.py:send_request():406] send_request: stop_status
+2023-09-20 10:29:45,940 DEBUG   HandlerThread:2687343 [handler.py:handle_request():144] handle_request: status_report
+2023-09-20 10:29:47,571 INFO    memory    :2687343 [interfaces.py:monitor():140] Process proc.memory.rssMB has exited.
+2023-09-20 10:29:47,572 DEBUG   SystemMonitor:2687343 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-09-20 10:29:47,573 DEBUG   SystemMonitor:2687343 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-09-20 10:29:47,577 DEBUG   SenderThread:2687343 [sender.py:send():379] send: stats
+2023-09-20 10:29:48,556 INFO    MainThread:2687343 [internal.py:handle_exit():76] Internal process exited

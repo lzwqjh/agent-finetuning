@@ -1,0 +1,636 @@
+2023-10-19 11:53:51,647 INFO    StreamThr :3616763 [internal.py:wandb_internal():86] W&B internal server running at pid: 3616763, started at: 2023-10-19 11:53:51.646142
+2023-10-19 11:53:51,650 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status
+2023-10-19 11:53:51,654 INFO    WriterThread:3616763 [datastore.py:open_for_write():85] open: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/run-l0tcl15a.wandb
+2023-10-19 11:53:51,655 DEBUG   SenderThread:3616763 [sender.py:send():379] send: header
+2023-10-19 11:53:51,658 DEBUG   SenderThread:3616763 [sender.py:send():379] send: run
+2023-10-19 11:53:52,470 INFO    SenderThread:3616763 [dir_watcher.py:__init__():211] watching files in: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files
+2023-10-19 11:53:52,471 INFO    SenderThread:3616763 [sender.py:_start_run_threads():1121] run started: l0tcl15a with start time 1697687631.645815
+2023-10-19 11:53:52,476 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: summary_record
+2023-10-19 11:53:52,477 INFO    SenderThread:3616763 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-10-19 11:53:52,489 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: check_version
+2023-10-19 11:53:52,490 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: check_version
+2023-10-19 11:53:53,474 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_created():271] file/dir created: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/wandb-summary.json
+2023-10-19 11:53:57,490 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: keepalive
+2023-10-19 11:53:57,492 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:53:57,546 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: run_start
+2023-10-19 11:53:57,566 DEBUG   HandlerThread:3616763 [system_info.py:__init__():31] System info init
+2023-10-19 11:53:57,566 DEBUG   HandlerThread:3616763 [system_info.py:__init__():46] System info init done
+2023-10-19 11:53:57,566 INFO    HandlerThread:3616763 [system_monitor.py:start():181] Starting system monitor
+2023-10-19 11:53:57,566 INFO    SystemMonitor:3616763 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2023-10-19 11:53:57,566 INFO    HandlerThread:3616763 [system_monitor.py:probe():201] Collecting system info
+2023-10-19 11:53:57,567 INFO    SystemMonitor:3616763 [interfaces.py:start():190] Started cpu monitoring
+2023-10-19 11:53:57,568 INFO    SystemMonitor:3616763 [interfaces.py:start():190] Started disk monitoring
+2023-10-19 11:53:57,572 INFO    SystemMonitor:3616763 [interfaces.py:start():190] Started gpu monitoring
+2023-10-19 11:53:57,576 INFO    SystemMonitor:3616763 [interfaces.py:start():190] Started memory monitoring
+2023-10-19 11:53:57,577 INFO    SystemMonitor:3616763 [interfaces.py:start():190] Started network monitoring
+2023-10-19 11:53:57,621 DEBUG   HandlerThread:3616763 [system_info.py:probe():195] Probing system
+2023-10-19 11:53:57,624 DEBUG   HandlerThread:3616763 [system_info.py:_probe_git():180] Probing git
+2023-10-19 11:53:57,633 DEBUG   HandlerThread:3616763 [system_info.py:_probe_git():188] Probing git done
+2023-10-19 11:53:57,633 DEBUG   HandlerThread:3616763 [system_info.py:probe():240] Probing system done
+2023-10-19 11:53:57,633 DEBUG   HandlerThread:3616763 [system_monitor.py:probe():210] {'os': 'Linux-5.19.0-32-generic-x86_64-with-glibc2.35', 'python': '3.10.13', 'heartbeatAt': '2023-10-19T03:53:57.621410', 'startedAt': '2023-10-19T03:53:51.635722', 'docker': None, 'cuda': None, 'args': ('--model_type', 'llama', '--template', 'chinese_llama2_alpaca', '--model_name_or_path', '/data/ssd/models/llama2-7b-chat-hf', '--dataset_dir', '/data/ssd/zqh/LLM-RLHF-Tuning/sft_data', '--split_ratio', '0.01', '--data_cache_dir', './sft_data/cache/data', '--block_size', '512', '--per_device_train_batch_size', '1', '--per_device_eval_batch_size', '1', '--dataloader_num_workers', '16', '--gradient_accumulation_steps', '8', '--do_train', '--do_eval', '--seed', '512', '--fp16', '--num_train_epochs', '30', '--max_prompt_length', '512', '--max_response_length', '512', '--logging_steps', '100', '--eval_steps', '100', '--save_steps', '100', '--learning_rate', '1e-5', '--lr_scheduler_type', 'cosine', '--warmup_ratio', '0.03', '--weight_decay', '0', '--logging_strategy', 'steps', '--save_strategy', 'steps', '--evaluation_strategy', 'steps', '--save_total_limit', '1', '--output_dir', 'sft_model_path', '--overwrite_output_dir', '--ddp_timeout', '30000', '--logging_first_step', 'True', '--lora_rank', '16', '--lora_alpha', '32', '--lora_target', 'q_proj,v_proj,k_proj,o_proj,gate_proj,down_proj,up_proj', '--lora_dropout', '0.05', '--torch_dtype', 'float16', '--report_to', 'wandb'), 'state': 'running', 'program': '/data/ssd/zqh/LLM-RLHF-Tuning/script/sft/run_sft_with_peft.py', 'codePath': 'script/sft/run_sft_with_peft.py', 'git': {'remote': 'https://github.com/Joyce94/LLM-RLHF-Tuning.git', 'commit': '5b02ef25742c0da31b88e74a2599532d8137fe4e'}, 'email': None, 'root': '/data/ssd/zqh/LLM-RLHF-Tuning', 'host': 'ubuntu', 'username': 'zqh', 'executable': '/data/zqh/.conda/envs/sft/bin/python', 'cpu_count': 52, 'cpu_count_logical': 104, 'cpu_freq': {'current': 1904.0279807692305, 'min': 1000.0, 'max': 3600.0}, 'cpu_freq_per_core': [{'current': 1462.489, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 1000.0, 'min': 1000.0, 'max': 3600.0}, {'current': 1182.823, 'min': 1000.0, 'max': 3600.0}, {'current': 1000.356, 'min': 1000.0, 'max': 3600.0}, {'current': 2717.475, 'min': 1000.0, 'max': 3600.0}, {'current': 999.646, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 1000.341, 'min': 1000.0, 'max': 3600.0}, {'current': 2409.983, 'min': 1000.0, 'max': 3600.0}, {'current': 1000.275, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 1000.283, 'min': 1000.0, 'max': 3600.0}, {'current': 2599.537, 'min': 1000.0, 'max': 3600.0}, {'current': 1000.086, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2958.699, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 999.841, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 1000.026, 'min': 1000.0, 'max': 3600.0}, {'current': 3039.267, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 999.957, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 1000.018, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 1576.233, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 3289.801, 'min': 1000.0, 'max': 3600.0}, {'current': 1000.028, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 3289.807, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 1000.288, 'min': 1000.0, 'max': 3600.0}, {'current': 1180.177, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 1898.531, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 3179.342, 'min': 1000.0, 'max': 3600.0}, {'current': 1000.09, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 1000.026, 'min': 1000.0, 'max': 3600.0}, {'current': 2958.71, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 3289.809, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 1001.185, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 3295.693, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 1200.303, 'min': 1000.0, 'max': 3600.0}, {'current': 1000.004, 'min': 1000.0, 'max': 3600.0}, {'current': 3071.77, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}, {'current': 2100.0, 'min': 1000.0, 'max': 3600.0}], 'disk': {'total': 366.7914581298828, 'used': 191.2984275817871}, 'gpu': 'NVIDIA GeForce RTX 4090', 'gpu_count': 8, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}, {'name': 'NVIDIA GeForce RTX 4090', 'memory_total': 25757220864}], 'memory': {'total': 188.50317001342773}}
+2023-10-19 11:53:57,633 INFO    HandlerThread:3616763 [system_monitor.py:probe():211] Finished collecting system info
+2023-10-19 11:53:57,633 INFO    HandlerThread:3616763 [system_monitor.py:probe():214] Publishing system info
+2023-10-19 11:53:57,633 DEBUG   HandlerThread:3616763 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2023-10-19 11:53:57,634 DEBUG   HandlerThread:3616763 [system_info.py:_save_pip():67] Saving pip packages done
+2023-10-19 11:53:57,634 DEBUG   HandlerThread:3616763 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2023-10-19 11:53:58,473 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_created():271] file/dir created: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/conda-environment.yaml
+2023-10-19 11:53:58,474 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_created():271] file/dir created: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/requirements.txt
+2023-10-19 11:53:59,933 DEBUG   HandlerThread:3616763 [system_info.py:_save_conda():86] Saving conda packages done
+2023-10-19 11:53:59,936 INFO    HandlerThread:3616763 [system_monitor.py:probe():216] Finished publishing system info
+2023-10-19 11:53:59,940 DEBUG   SenderThread:3616763 [sender.py:send():379] send: files
+2023-10-19 11:53:59,940 INFO    SenderThread:3616763 [sender.py:_save_file():1375] saving file wandb-metadata.json with policy now
+2023-10-19 11:53:59,950 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:53:59,951 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:54:00,474 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/conda-environment.yaml
+2023-10-19 11:54:00,475 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_created():271] file/dir created: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/wandb-metadata.json
+2023-10-19 11:54:00,528 DEBUG   SenderThread:3616763 [sender.py:send():379] send: telemetry
+2023-10-19 11:54:00,528 DEBUG   SenderThread:3616763 [sender.py:send():379] send: config
+2023-10-19 11:54:00,530 DEBUG   SenderThread:3616763 [sender.py:send():379] send: metric
+2023-10-19 11:54:00,531 DEBUG   SenderThread:3616763 [sender.py:send():379] send: telemetry
+2023-10-19 11:54:00,531 DEBUG   SenderThread:3616763 [sender.py:send():379] send: metric
+2023-10-19 11:54:00,531 WARNING SenderThread:3616763 [sender.py:send_metric():1326] Seen metric with glob (shouldn't happen)
+2023-10-19 11:54:01,270 INFO    wandb-upload_0:3616763 [upload_job.py:push():131] Uploaded file /tmp/tmpf1l5gqifwandb/y6172v0n-wandb-metadata.json
+2023-10-19 11:54:01,475 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_created():271] file/dir created: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:02,538 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:54:03,476 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:04,347 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: partial_history
+2023-10-19 11:54:04,351 DEBUG   SenderThread:3616763 [sender.py:send():379] send: metric
+2023-10-19 11:54:04,351 DEBUG   SenderThread:3616763 [sender.py:send():379] send: metric
+2023-10-19 11:54:04,351 DEBUG   SenderThread:3616763 [sender.py:send():379] send: metric
+2023-10-19 11:54:04,351 DEBUG   SenderThread:3616763 [sender.py:send():379] send: history
+2023-10-19 11:54:04,351 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: summary_record
+2023-10-19 11:54:04,352 INFO    SenderThread:3616763 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-10-19 11:54:04,477 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/wandb-summary.json
+2023-10-19 11:54:06,478 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:07,478 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:07,605 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:54:09,480 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:11,481 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:12,864 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:54:13,482 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:14,950 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:54:14,952 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:54:15,483 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:17,484 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:18,329 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:54:19,485 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:23,487 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:23,707 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:54:24,488 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/config.yaml
+2023-10-19 11:54:25,488 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:27,489 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:29,159 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:54:29,491 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:29,951 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:54:29,952 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:54:31,492 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:33,493 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:34,339 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:54:35,494 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:37,495 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:39,700 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:54:41,498 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:43,499 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:44,951 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:54:44,952 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:54:45,309 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:54:45,500 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:47,501 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:49,502 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:50,873 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:54:51,503 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:53,505 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:55,506 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:56,498 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:54:57,578 DEBUG   SystemMonitor:3616763 [system_monitor.py:_start():159] Starting system metrics aggregation loop
+2023-10-19 11:54:57,585 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 11:54:59,508 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:54:59,953 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:54:59,954 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:55:01,509 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:01,619 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:55:05,511 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:07,196 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:55:07,512 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:09,513 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:11,515 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:12,672 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:55:13,516 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:15,023 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:55:15,024 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:55:15,517 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:18,363 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:55:19,519 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:21,520 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:23,521 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:23,698 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:55:25,522 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:27,523 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:27,587 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 11:55:29,179 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:55:29,524 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:29,963 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:55:29,964 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:55:31,525 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:34,528 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:55:35,530 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:37,531 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:39,533 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:39,797 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:55:41,534 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:43,535 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:44,963 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:55:44,964 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:55:45,267 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:55:45,536 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:47,537 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:49,538 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:50,474 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:55:53,541 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:55,542 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:55,864 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:55:57,543 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:57,592 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 11:55:59,544 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:55:59,964 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:55:59,965 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:56:01,381 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:56:01,545 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:03,546 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:05,547 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:06,525 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:56:07,548 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:11,550 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:11,784 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:56:13,551 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:14,972 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:56:14,973 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:56:15,552 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:16,822 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:56:17,554 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:21,556 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:22,491 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:56:23,557 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:25,558 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:27,559 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:27,596 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 11:56:27,599 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:56:29,969 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:56:29,970 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:56:31,561 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:33,380 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:56:33,562 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:35,564 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:37,566 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:38,650 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:56:39,566 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:41,568 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:43,569 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:43,803 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:56:44,970 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:56:44,971 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:56:47,571 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:49,230 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:56:49,572 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:51,572 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:53,574 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:54,627 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:56:55,575 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:57,576 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:57,601 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 11:56:59,577 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:56:59,895 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:56:59,969 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:56:59,970 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:57:01,578 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:05,290 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:57:05,580 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:07,581 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:09,582 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:10,792 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:57:11,583 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:13,584 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:14,970 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:57:14,971 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:57:15,585 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:16,141 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:57:17,586 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:19,587 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:21,308 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:57:23,589 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:25,590 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:27,200 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:57:27,591 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:27,605 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 11:57:29,593 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:29,970 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:57:29,971 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:57:31,594 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:32,924 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:57:35,596 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:37,597 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:38,171 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:57:39,598 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:43,421 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:57:43,601 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:44,971 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:57:44,971 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:57:45,602 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:47,603 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:48,588 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:57:49,604 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:51,605 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:54,269 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:57:55,607 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:55,612 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: partial_history
+2023-10-19 11:57:55,614 DEBUG   SenderThread:3616763 [sender.py:send():379] send: history
+2023-10-19 11:57:55,615 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: summary_record
+2023-10-19 11:57:55,616 INFO    SenderThread:3616763 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-10-19 11:57:56,608 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/wandb-summary.json
+2023-10-19 11:57:56,681 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: partial_history
+2023-10-19 11:57:56,684 DEBUG   SenderThread:3616763 [sender.py:send():379] send: metric
+2023-10-19 11:57:56,685 DEBUG   SenderThread:3616763 [sender.py:send():379] send: metric
+2023-10-19 11:57:56,687 DEBUG   SenderThread:3616763 [sender.py:send():379] send: metric
+2023-10-19 11:57:56,688 DEBUG   SenderThread:3616763 [sender.py:send():379] send: metric
+2023-10-19 11:57:56,688 DEBUG   SenderThread:3616763 [sender.py:send():379] send: history
+2023-10-19 11:57:56,688 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: summary_record
+2023-10-19 11:57:56,689 INFO    SenderThread:3616763 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-10-19 11:57:57,607 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 11:57:57,610 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/wandb-summary.json
+2023-10-19 11:57:57,611 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:59,610 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:57:59,611 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:57:59,979 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:57:59,980 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:58:01,612 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:03,613 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:04,952 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:58:07,616 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:09,617 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:10,372 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:58:11,618 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:11,618 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/config.yaml
+2023-10-19 11:58:13,619 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:14,976 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:58:14,977 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:58:15,620 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:16,160 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:58:17,622 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:21,396 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:58:21,624 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:23,625 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:25,625 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:26,533 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:58:27,618 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 11:58:27,627 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:29,628 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:29,976 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:58:29,977 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:58:31,629 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:31,847 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:58:33,630 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:37,132 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:58:37,632 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:39,633 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:41,634 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:42,758 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:58:43,636 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:44,977 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:58:44,978 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:58:47,638 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:48,516 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:58:49,639 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:51,640 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:53,642 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:53,868 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:58:55,643 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:57,615 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 11:58:59,617 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:58:59,645 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:58:59,977 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:58:59,978 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:59:01,646 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:03,647 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:05,041 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:59:05,648 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:07,649 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:09,650 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:10,353 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:59:11,652 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:14,977 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:59:14,978 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:59:15,374 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:59:15,654 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:17,656 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:19,657 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:21,369 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:59:21,658 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:23,659 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:25,660 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:26,763 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:59:27,619 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 11:59:27,661 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:29,662 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:29,977 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:59:29,977 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:59:32,334 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:59:33,663 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:35,664 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:37,613 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:59:37,665 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:39,666 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:41,667 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:43,048 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:59:43,668 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:44,978 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:59:44,978 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 11:59:47,669 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:48,681 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:59:49,671 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:51,672 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:53,673 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:54,099 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:59:57,630 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 11:59:57,675 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:59,633 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 11:59:59,676 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 11:59:59,978 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 11:59:59,979 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 12:00:01,677 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:03,677 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:05,090 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:00:05,678 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:07,679 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:10,441 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:00:11,682 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:13,683 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:14,978 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 12:00:14,979 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 12:00:15,684 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:16,082 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:00:17,685 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:19,686 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:21,497 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:00:21,687 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:23,688 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:26,966 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:00:27,627 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 12:00:27,691 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:29,692 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:29,979 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 12:00:29,980 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 12:00:31,693 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:32,590 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:00:33,694 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:35,695 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:37,696 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:38,319 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:00:41,699 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:43,677 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:00:43,700 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:44,979 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 12:00:44,980 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 12:00:45,701 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:49,394 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:00:49,703 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:51,705 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:53,705 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:54,932 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:00:55,707 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:57,631 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 12:00:57,708 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:59,709 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:00:59,979 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:00:59,979 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 12:00:59,980 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 12:01:01,710 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:05,449 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:01:05,712 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:07,713 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:09,714 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:10,972 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:01:11,715 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:13,716 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:14,979 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 12:01:14,980 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 12:01:15,717 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:16,285 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:01:17,719 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:19,720 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:21,641 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:01:23,722 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:25,723 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:26,999 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:01:27,635 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 12:01:27,724 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:29,725 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:29,980 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 12:01:29,981 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 12:01:31,726 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:32,213 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:01:33,727 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:35,729 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:37,477 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:01:39,731 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:41,732 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:43,435 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:01:43,733 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:44,980 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 12:01:44,981 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 12:01:45,734 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:47,735 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:49,063 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:01:49,736 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:51,272 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: partial_history
+2023-10-19 12:01:51,275 DEBUG   SenderThread:3616763 [sender.py:send():379] send: history
+2023-10-19 12:01:51,275 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: summary_record
+2023-10-19 12:01:51,276 INFO    SenderThread:3616763 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-10-19 12:01:51,737 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/wandb-summary.json
+2023-10-19 12:01:51,738 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:52,381 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: partial_history
+2023-10-19 12:01:52,384 DEBUG   SenderThread:3616763 [sender.py:send():379] send: history
+2023-10-19 12:01:52,385 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: summary_record
+2023-10-19 12:01:52,385 INFO    SenderThread:3616763 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-10-19 12:01:52,738 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/wandb-summary.json
+2023-10-19 12:01:53,738 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:54,087 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:01:55,740 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:57,639 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 12:01:59,465 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:01:59,742 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:01:59,997 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 12:01:59,998 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 12:02:01,743 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:02:03,744 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:02:05,071 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:02:05,745 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:02:09,747 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:02:10,912 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:02:11,748 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:02:13,750 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:02:14,988 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: stop_status
+2023-10-19 12:02:14,988 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: stop_status
+2023-10-19 12:02:15,751 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:02:16,270 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:02:17,685 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: partial_history
+2023-10-19 12:02:17,689 DEBUG   SenderThread:3616763 [sender.py:send():379] send: metric
+2023-10-19 12:02:17,689 DEBUG   SenderThread:3616763 [sender.py:send():379] send: metric
+2023-10-19 12:02:17,690 DEBUG   SenderThread:3616763 [sender.py:send():379] send: metric
+2023-10-19 12:02:17,690 DEBUG   SenderThread:3616763 [sender.py:send():379] send: metric
+2023-10-19 12:02:17,690 DEBUG   SenderThread:3616763 [sender.py:send():379] send: metric
+2023-10-19 12:02:17,697 DEBUG   SenderThread:3616763 [sender.py:send():379] send: history
+2023-10-19 12:02:17,697 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: summary_record
+2023-10-19 12:02:17,698 INFO    SenderThread:3616763 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-10-19 12:02:17,752 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/wandb-summary.json
+2023-10-19 12:02:17,752 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:02:19,285 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: partial_history
+2023-10-19 12:02:19,288 DEBUG   SenderThread:3616763 [sender.py:send():379] send: history
+2023-10-19 12:02:19,289 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: summary_record
+2023-10-19 12:02:19,292 INFO    SenderThread:3616763 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-10-19 12:02:19,294 DEBUG   SenderThread:3616763 [sender.py:send():379] send: exit
+2023-10-19 12:02:19,294 INFO    SenderThread:3616763 [sender.py:send_exit():584] handling exit code: 0
+2023-10-19 12:02:19,295 INFO    SenderThread:3616763 [sender.py:send_exit():586] handling runtime: 501
+2023-10-19 12:02:19,296 INFO    SenderThread:3616763 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-10-19 12:02:19,296 INFO    SenderThread:3616763 [sender.py:send_exit():592] send defer
+2023-10-19 12:02:19,297 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: defer
+2023-10-19 12:02:19,297 INFO    HandlerThread:3616763 [handler.py:handle_request_defer():170] handle defer: 0
+2023-10-19 12:02:19,297 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: defer
+2023-10-19 12:02:19,298 INFO    SenderThread:3616763 [sender.py:send_request_defer():608] handle sender defer: 0
+2023-10-19 12:02:19,298 INFO    SenderThread:3616763 [sender.py:transition_state():612] send defer: 1
+2023-10-19 12:02:19,298 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: defer
+2023-10-19 12:02:19,298 INFO    HandlerThread:3616763 [handler.py:handle_request_defer():170] handle defer: 1
+2023-10-19 12:02:19,298 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: defer
+2023-10-19 12:02:19,299 INFO    SenderThread:3616763 [sender.py:send_request_defer():608] handle sender defer: 1
+2023-10-19 12:02:19,299 INFO    SenderThread:3616763 [sender.py:transition_state():612] send defer: 2
+2023-10-19 12:02:19,299 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: defer
+2023-10-19 12:02:19,299 INFO    HandlerThread:3616763 [handler.py:handle_request_defer():170] handle defer: 2
+2023-10-19 12:02:19,299 INFO    HandlerThread:3616763 [system_monitor.py:finish():190] Stopping system monitor
+2023-10-19 12:02:19,299 DEBUG   SystemMonitor:3616763 [system_monitor.py:_start():166] Finished system metrics aggregation loop
+2023-10-19 12:02:19,300 INFO    HandlerThread:3616763 [interfaces.py:finish():202] Joined cpu monitor
+2023-10-19 12:02:19,300 DEBUG   SystemMonitor:3616763 [system_monitor.py:_start():170] Publishing last batch of metrics
+2023-10-19 12:02:19,301 INFO    HandlerThread:3616763 [interfaces.py:finish():202] Joined disk monitor
+2023-10-19 12:02:19,753 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/wandb-summary.json
+2023-10-19 12:02:19,753 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:02:21,300 INFO    HandlerThread:3616763 [interfaces.py:finish():202] Joined gpu monitor
+2023-10-19 12:02:21,300 INFO    HandlerThread:3616763 [interfaces.py:finish():202] Joined memory monitor
+2023-10-19 12:02:21,301 INFO    HandlerThread:3616763 [interfaces.py:finish():202] Joined network monitor
+2023-10-19 12:02:21,301 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: poll_exit
+2023-10-19 12:02:21,301 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:02:21,302 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: defer
+2023-10-19 12:02:21,302 INFO    SenderThread:3616763 [sender.py:send_request_defer():608] handle sender defer: 2
+2023-10-19 12:02:21,302 INFO    SenderThread:3616763 [sender.py:transition_state():612] send defer: 3
+2023-10-19 12:02:21,303 DEBUG   SenderThread:3616763 [sender.py:send():379] send: stats
+2023-10-19 12:02:21,304 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: poll_exit
+2023-10-19 12:02:21,305 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: defer
+2023-10-19 12:02:21,305 INFO    HandlerThread:3616763 [handler.py:handle_request_defer():170] handle defer: 3
+2023-10-19 12:02:21,306 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: defer
+2023-10-19 12:02:21,306 INFO    SenderThread:3616763 [sender.py:send_request_defer():608] handle sender defer: 3
+2023-10-19 12:02:21,306 INFO    SenderThread:3616763 [sender.py:transition_state():612] send defer: 4
+2023-10-19 12:02:21,306 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: defer
+2023-10-19 12:02:21,306 INFO    HandlerThread:3616763 [handler.py:handle_request_defer():170] handle defer: 4
+2023-10-19 12:02:21,307 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: defer
+2023-10-19 12:02:21,307 INFO    SenderThread:3616763 [sender.py:send_request_defer():608] handle sender defer: 4
+2023-10-19 12:02:21,307 INFO    SenderThread:3616763 [sender.py:transition_state():612] send defer: 5
+2023-10-19 12:02:21,307 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: defer
+2023-10-19 12:02:21,307 INFO    HandlerThread:3616763 [handler.py:handle_request_defer():170] handle defer: 5
+2023-10-19 12:02:21,308 DEBUG   SenderThread:3616763 [sender.py:send():379] send: summary
+2023-10-19 12:02:21,309 INFO    SenderThread:3616763 [sender.py:_save_file():1375] saving file wandb-summary.json with policy end
+2023-10-19 12:02:21,310 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: defer
+2023-10-19 12:02:21,310 INFO    SenderThread:3616763 [sender.py:send_request_defer():608] handle sender defer: 5
+2023-10-19 12:02:21,310 INFO    SenderThread:3616763 [sender.py:transition_state():612] send defer: 6
+2023-10-19 12:02:21,310 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: defer
+2023-10-19 12:02:21,310 INFO    HandlerThread:3616763 [handler.py:handle_request_defer():170] handle defer: 6
+2023-10-19 12:02:21,311 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: defer
+2023-10-19 12:02:21,311 INFO    SenderThread:3616763 [sender.py:send_request_defer():608] handle sender defer: 6
+2023-10-19 12:02:21,316 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:02:21,756 INFO    SenderThread:3616763 [sender.py:transition_state():612] send defer: 7
+2023-10-19 12:02:21,756 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: defer
+2023-10-19 12:02:21,756 INFO    HandlerThread:3616763 [handler.py:handle_request_defer():170] handle defer: 7
+2023-10-19 12:02:21,757 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/wandb-summary.json
+2023-10-19 12:02:21,758 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: defer
+2023-10-19 12:02:21,758 INFO    SenderThread:3616763 [sender.py:send_request_defer():608] handle sender defer: 7
+2023-10-19 12:02:21,758 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:02:21,759 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/config.yaml
+2023-10-19 12:02:24,991 INFO    SenderThread:3616763 [sender.py:transition_state():612] send defer: 8
+2023-10-19 12:02:24,992 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: defer
+2023-10-19 12:02:24,992 INFO    HandlerThread:3616763 [handler.py:handle_request_defer():170] handle defer: 8
+2023-10-19 12:02:24,992 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: defer
+2023-10-19 12:02:24,993 INFO    SenderThread:3616763 [sender.py:send_request_defer():608] handle sender defer: 8
+2023-10-19 12:02:24,993 INFO    SenderThread:3616763 [job_builder.py:build():281] Attempting to build job artifact
+2023-10-19 12:02:24,997 INFO    SenderThread:3616763 [job_builder.py:_get_source_type():400] is repo sourced job
+2023-10-19 12:02:25,002 INFO    SenderThread:3616763 [job_builder.py:build():374] adding wandb-job metadata file
+2023-10-19 12:02:25,014 INFO    SenderThread:3616763 [sender.py:transition_state():612] send defer: 9
+2023-10-19 12:02:25,015 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: defer
+2023-10-19 12:02:25,015 INFO    HandlerThread:3616763 [handler.py:handle_request_defer():170] handle defer: 9
+2023-10-19 12:02:25,016 DEBUG   SenderThread:3616763 [sender.py:send():379] send: artifact
+2023-10-19 12:02:25,297 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: keepalive
+2023-10-19 12:02:25,761 INFO    Thread-12 :3616763 [dir_watcher.py:_on_file_modified():288] file/dir modified: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:02:26,575 INFO    SenderThread:3616763 [sender.py:send_artifact():1475] sent artifact job-https___github.com_Joyce94_LLM-RLHF-Tuning.git_script_sft_run_sft_with_peft.py - {'id': 'QXJ0aWZhY3Q6NjAwMDUxNTk5', 'digest': 'c7f23148aa0288729bc5bb97ad49fcfb', 'state': 'COMMITTED', 'aliases': [{'artifactCollectionName': 'job-https___github.com_Joyce94_LLM-RLHF-Tuning.git_script_sft_run_sft_with_peft.py', 'alias': 'latest'}, {'artifactCollectionName': 'job-https___github.com_Joyce94_LLM-RLHF-Tuning.git_script_sft_run_sft_with_peft.py', 'alias': 'v3'}], 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjk4OTgzMTEz', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6NjA4NTE1MzMz', 'versionIndex': 5}}, 'version': 'v3'}
+2023-10-19 12:02:26,576 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: defer
+2023-10-19 12:02:26,576 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:02:26,576 INFO    SenderThread:3616763 [sender.py:send_request_defer():608] handle sender defer: 9
+2023-10-19 12:02:26,576 INFO    SenderThread:3616763 [dir_watcher.py:finish():358] shutting down directory watcher
+2023-10-19 12:02:26,762 INFO    SenderThread:3616763 [dir_watcher.py:finish():388] scan: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files
+2023-10-19 12:02:26,763 INFO    SenderThread:3616763 [dir_watcher.py:finish():402] scan save: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log output.log
+2023-10-19 12:02:26,763 INFO    SenderThread:3616763 [dir_watcher.py:finish():402] scan save: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/config.yaml config.yaml
+2023-10-19 12:02:26,764 INFO    SenderThread:3616763 [dir_watcher.py:finish():402] scan save: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/wandb-metadata.json wandb-metadata.json
+2023-10-19 12:02:26,764 INFO    SenderThread:3616763 [dir_watcher.py:finish():402] scan save: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/wandb-summary.json wandb-summary.json
+2023-10-19 12:02:26,765 INFO    SenderThread:3616763 [dir_watcher.py:finish():402] scan save: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/requirements.txt requirements.txt
+2023-10-19 12:02:26,765 INFO    SenderThread:3616763 [dir_watcher.py:finish():402] scan save: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/conda-environment.yaml conda-environment.yaml
+2023-10-19 12:02:26,772 INFO    SenderThread:3616763 [sender.py:transition_state():612] send defer: 10
+2023-10-19 12:02:26,778 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: defer
+2023-10-19 12:02:26,779 INFO    HandlerThread:3616763 [handler.py:handle_request_defer():170] handle defer: 10
+2023-10-19 12:02:26,787 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: defer
+2023-10-19 12:02:26,787 INFO    SenderThread:3616763 [sender.py:send_request_defer():608] handle sender defer: 10
+2023-10-19 12:02:26,788 INFO    SenderThread:3616763 [file_pusher.py:finish():159] shutting down file pusher
+2023-10-19 12:02:27,684 INFO    wandb-upload_0:3616763 [upload_job.py:push():131] Uploaded file /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/output.log
+2023-10-19 12:02:28,060 INFO    wandb-upload_4:3616763 [upload_job.py:push():131] Uploaded file /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/conda-environment.yaml
+2023-10-19 12:02:28,062 INFO    wandb-upload_3:3616763 [upload_job.py:push():131] Uploaded file /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/requirements.txt
+2023-10-19 12:02:28,077 INFO    wandb-upload_2:3616763 [upload_job.py:push():131] Uploaded file /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/wandb-summary.json
+2023-10-19 12:02:30,300 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: keepalive
+2023-10-19 12:02:31,789 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:02:35,302 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: keepalive
+2023-10-19 12:02:36,790 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: status_report
+2023-10-19 12:02:38,878 INFO    wandb-upload_1:3616763 [upload_job.py:push():131] Uploaded file /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/files/config.yaml
+2023-10-19 12:02:39,078 INFO    Thread-11 (_thread_body):3616763 [sender.py:transition_state():612] send defer: 11
+2023-10-19 12:02:39,079 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: defer
+2023-10-19 12:02:39,079 INFO    HandlerThread:3616763 [handler.py:handle_request_defer():170] handle defer: 11
+2023-10-19 12:02:39,080 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: defer
+2023-10-19 12:02:39,080 INFO    SenderThread:3616763 [sender.py:send_request_defer():608] handle sender defer: 11
+2023-10-19 12:02:39,080 INFO    SenderThread:3616763 [file_pusher.py:join():164] waiting for file pusher
+2023-10-19 12:02:39,080 INFO    SenderThread:3616763 [sender.py:transition_state():612] send defer: 12
+2023-10-19 12:02:39,081 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: defer
+2023-10-19 12:02:39,081 INFO    HandlerThread:3616763 [handler.py:handle_request_defer():170] handle defer: 12
+2023-10-19 12:02:39,081 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: defer
+2023-10-19 12:02:39,081 INFO    SenderThread:3616763 [sender.py:send_request_defer():608] handle sender defer: 12
+2023-10-19 12:02:39,082 INFO    SenderThread:3616763 [file_stream.py:finish():593] file stream finish called
+2023-10-19 12:02:39,984 INFO    SenderThread:3616763 [file_stream.py:finish():597] file stream finish is done
+2023-10-19 12:02:39,984 INFO    SenderThread:3616763 [sender.py:transition_state():612] send defer: 13
+2023-10-19 12:02:39,984 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: defer
+2023-10-19 12:02:39,984 INFO    HandlerThread:3616763 [handler.py:handle_request_defer():170] handle defer: 13
+2023-10-19 12:02:39,985 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: defer
+2023-10-19 12:02:39,985 INFO    SenderThread:3616763 [sender.py:send_request_defer():608] handle sender defer: 13
+2023-10-19 12:02:39,986 INFO    SenderThread:3616763 [sender.py:transition_state():612] send defer: 14
+2023-10-19 12:02:39,986 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: defer
+2023-10-19 12:02:39,986 INFO    HandlerThread:3616763 [handler.py:handle_request_defer():170] handle defer: 14
+2023-10-19 12:02:39,987 DEBUG   SenderThread:3616763 [sender.py:send():379] send: final
+2023-10-19 12:02:39,987 DEBUG   SenderThread:3616763 [sender.py:send():379] send: footer
+2023-10-19 12:02:39,987 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: defer
+2023-10-19 12:02:39,987 INFO    SenderThread:3616763 [sender.py:send_request_defer():608] handle sender defer: 14
+2023-10-19 12:02:39,988 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: poll_exit
+2023-10-19 12:02:39,989 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: poll_exit
+2023-10-19 12:02:39,989 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: server_info
+2023-10-19 12:02:39,990 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: server_info
+2023-10-19 12:02:39,994 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: get_summary
+2023-10-19 12:02:39,995 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: sampled_history
+2023-10-19 12:02:39,997 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: job_info
+2023-10-19 12:02:40,269 DEBUG   SenderThread:3616763 [sender.py:send_request():406] send_request: job_info
+2023-10-19 12:02:40,270 INFO    MainThread:3616763 [wandb_run.py:_footer_history_summary_info():3481] rendering history
+2023-10-19 12:02:40,272 INFO    MainThread:3616763 [wandb_run.py:_footer_history_summary_info():3513] rendering summary
+2023-10-19 12:02:40,272 INFO    MainThread:3616763 [wandb_run.py:_footer_sync_info():3440] logging synced files
+2023-10-19 12:02:40,273 DEBUG   HandlerThread:3616763 [handler.py:handle_request():144] handle_request: shutdown
+2023-10-19 12:02:40,273 INFO    HandlerThread:3616763 [handler.py:finish():857] shutting down handler
+2023-10-19 12:02:40,998 INFO    WriterThread:3616763 [datastore.py:close():294] close: /data/ssd/zqh/LLM-RLHF-Tuning/script/sft/wandb/run-20231019_115351-l0tcl15a/run-l0tcl15a.wandb
+2023-10-19 12:02:41,270 INFO    SenderThread:3616763 [sender.py:finish():1552] shutting down sender
+2023-10-19 12:02:41,270 INFO    SenderThread:3616763 [file_pusher.py:finish():159] shutting down file pusher
+2023-10-19 12:02:41,270 INFO    SenderThread:3616763 [file_pusher.py:join():164] waiting for file pusher

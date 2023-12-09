@@ -1,0 +1,76 @@
+
+
+  2%|███                                                                                                                                                    | 1/50 [00:04<03:37,  4.44s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [02:01<00:00,  2.36s/it][INFO|trainer.py:1934] 2023-10-18 14:32:56,452 >>
+Training completed. Do not forget to share your model on huggingface.co/models =)
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 50/50 [02:02<00:00,  2.44s/it]
+[INFO|tokenization_utils_base.py:2210] 2023-10-18 14:32:56,808 >> tokenizer config file saved in sft_model_path/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2217] 2023-10-18 14:32:56,809 >> Special tokens file saved in sft_model_path/special_tokens_map.json
+[INFO|trainer.py:3081] 2023-10-18 14:32:56,818 >> ***** Running Evaluation *****
+[INFO|trainer.py:3083] 2023-10-18 14:32:56,818 >>   Num examples = 2
+[INFO|trainer.py:3086] 2023-10-18 14:32:56,818 >>   Batch size = 1
+{'train_runtime': 132.4777, 'train_samples_per_second': 12.228, 'train_steps_per_second': 0.377, 'train_loss': 3.138083744049072, 'epoch': 9.76}
+10/18/2023 14:32:56 - INFO - utils.trainer - Saving model checkpoint to sft_model_path
+10/18/2023 14:32:56 - INFO - utils.trainer - Trainer.model is not a `PreTrainedModel`, only saving its state dict.
+***** train metrics *****
+  epoch                    =       9.76
+  train_loss               =     3.1381
+  train_runtime            = 0:02:12.47
+  train_samples_per_second =     12.228
+  train_steps_per_second   =      0.377
+***** eval metrics *****
+  epoch                   =       9.76
+  eval_loss               =     3.2048
+  eval_runtime            = 0:00:01.14
+  eval_samples_per_second =      1.744
+  eval_steps_per_second   =      0.872
+  perplexity              =    24.6495
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 557.31it/s]

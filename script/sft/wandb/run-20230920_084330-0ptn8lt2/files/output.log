@@ -1,0 +1,51 @@
+
+
+  0%|                                                                                                                                                                       | 1/1583 [00:05<2:26:13,  5.55s/it]
+  0%|                                                                                                                                                                       | 1/1583 [00:05<2:26:13,  5.55s/it]Traceback (most recent call last):
+  File "/data/zqh/LLM-RLHF-Tuning/script/sft/run_sft_with_peft.py", line 229, in <module>
+    main()
+  File "/data/zqh/LLM-RLHF-Tuning/script/sft/run_sft_with_peft.py", line 207, in main
+    output = trainer.train()
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/transformers/trainer.py", line 1809, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/transformers/trainer.py", line 2654, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/transformers/trainer.py", line 2679, in compute_loss
+    outputs = model(**inputs)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1156, in forward
+    output = self._run_ddp_forward(*inputs, **kwargs)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1110, in _run_ddp_forward
+    return module_to_run(*inputs[0], **kwargs[0])  # type: ignore[index]
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/accelerate/utils/operations.py", line 581, in forward
+    return model_forward(*args, **kwargs)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/accelerate/utils/operations.py", line 569, in __call__
+    return convert_to_fp32(self.model_forward(*args, **kwargs))
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/accelerate/utils/operations.py", line 548, in convert_to_fp32
+    return recursively_apply(_convert_to_fp32, tensor, test_type=_is_fp16_bf16_tensor)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/accelerate/utils/operations.py", line 120, in recursively_apply
+    {
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/accelerate/utils/operations.py", line 121, in <dictcomp>
+    k: recursively_apply(
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/accelerate/utils/operations.py", line 109, in recursively_apply
+    return honor_type(
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/accelerate/utils/operations.py", line 83, in honor_type
+    return type(obj)(generator)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/accelerate/utils/operations.py", line 112, in <genexpr>
+    recursively_apply(
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/accelerate/utils/operations.py", line 109, in recursively_apply
+    return honor_type(
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/accelerate/utils/operations.py", line 83, in honor_type
+    return type(obj)(generator)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/accelerate/utils/operations.py", line 112, in <genexpr>
+    recursively_apply(
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/accelerate/utils/operations.py", line 128, in recursively_apply
+    return func(data, *args, **kwargs)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/accelerate/utils/operations.py", line 543, in _convert_to_fp32
+    return tensor.float()
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB (GPU 0; 23.65 GiB total capacity; 22.19 GiB already allocated; 20.81 MiB free; 22.40 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

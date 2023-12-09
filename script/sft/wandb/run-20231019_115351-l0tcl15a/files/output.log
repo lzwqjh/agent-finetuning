@@ -1,0 +1,252 @@
+
+  0%|                                                                                                                                                                                  | 0/210 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 47%|███████████████████████████████████████████████████████████████████████████████▋                                                                                         | 99/210 [03:53<04:27,  2.41s/it]
+ 48%|████████████████████████████████████████████████████████████████████████████████                                                                                        | 100/210 [03:55<04:22,  2.38s/it][INFO|trainer.py:3081] 2023-10-19 11:57:55,618 >> ***** Running Evaluation *****
+[INFO|trainer.py:3083] 2023-10-19 11:57:55,619 >>   Num examples = 3
+[INFO|trainer.py:3086] 2023-10-19 11:57:55,619 >>   Batch size = 1
+ 48%|████████████████████████████████████████████████████████████████████████████████                                                                                        | 100/210 [03:56<04:22,  2.38s/it][INFO|tokenization_utils_base.py:2210] 2023-10-19 11:57:56,976 >> tokenizer config file saved in sft_model_path/checkpoint-100/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2217] 2023-10-19 11:57:56,977 >> Special tokens file saved in sft_model_path/checkpoint-100/special_tokens_map.json
+{'eval_loss': 0.7020518183708191, 'eval_runtime': 1.0618, 'eval_samples_per_second': 2.825, 'eval_steps_per_second': 0.942, 'epoch': 12.9}
+10/19/2023 11:57:56 - INFO - utils.trainer - Saving model checkpoint to sft_model_path/checkpoint-100
+10/19/2023 11:57:56 - INFO - utils.trainer - Trainer.model is not a `PreTrainedModel`, only saving its state dict.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 95%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████        | 200/210 [07:51<00:22,  2.22s/it][INFO|trainer.py:3081] 2023-10-19 12:01:51,281 >> ***** Running Evaluation *****
+[INFO|trainer.py:3083] 2023-10-19 12:01:51,282 >>   Num examples = 3
+[INFO|trainer.py:3086] 2023-10-19 12:01:51,282 >>   Batch size = 1
+{'loss': 1.255, 'learning_rate': 7.227431544266194e-08, 'epoch': 25.81}
+{'eval_loss': 0.6471754312515259, 'eval_runtime': 1.0985, 'eval_samples_per_second': 2.731, 'eval_steps_per_second': 0.91, 'epoch': 25.81}
+10/19/2023 12:01:52 - INFO - utils.trainer - Saving model checkpoint to sft_model_path/checkpoint-200
+10/19/2023 12:01:52 - INFO - utils.trainer - Trainer.model is not a `PreTrainedModel`, only saving its state dict.
+ 95%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████        | 200/210 [07:52<00:22,  2.22s/it][INFO|tokenization_utils_base.py:2210] 2023-10-19 12:01:52,625 >> tokenizer config file saved in sft_model_path/checkpoint-200/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2217] 2023-10-19 12:01:52,626 >> Special tokens file saved in sft_model_path/checkpoint-200/special_tokens_map.json
+[INFO|trainer.py:2894] 2023-10-19 12:01:53,085 >> Deleting older checkpoint [sft_model_path/checkpoint-100] due to args.save_total_limit
+
+
+
+
+
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 210/210 [08:17<00:00,  2.57s/it]
+{'train_runtime': 508.2123, 'train_samples_per_second': 14.64, 'train_steps_per_second': 0.413, 'train_loss': 1.7085394473302933, 'epoch': 27.1}
+10/19/2023 12:02:17 - INFO - utils.trainer - Saving model checkpoint to sft_model_path
+10/19/2023 12:02:17 - INFO - utils.trainer - Trainer.model is not a `PreTrainedModel`, only saving its state dict.
+***** train metrics *****
+  epoch                    =       27.1
+  train_loss               =     1.7085
+  train_runtime            = 0:08:28.21
+  train_samples_per_second =      14.64
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 210/210 [08:17<00:00,  2.57s/it][INFO|trainer.py:1934] 2023-10-19 12:02:17,674 >>
+Training completed. Do not forget to share your model on huggingface.co/models =)
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 210/210 [08:17<00:00,  2.37s/it]
+[INFO|tokenization_utils_base.py:2210] 2023-10-19 12:02:17,994 >> tokenizer config file saved in sft_model_path/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2217] 2023-10-19 12:02:17,995 >> Special tokens file saved in sft_model_path/special_tokens_map.json
+[INFO|trainer.py:3081] 2023-10-19 12:02:18,003 >> ***** Running Evaluation *****
+[INFO|trainer.py:3083] 2023-10-19 12:02:18,004 >>   Num examples = 3
+[INFO|trainer.py:3086] 2023-10-19 12:02:18,004 >>   Batch size = 1
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 614.82it/s]
+***** eval metrics *****
+  epoch                   =       27.1
+  eval_loss               =     0.6475
+  eval_runtime            = 0:00:01.28
+  eval_samples_per_second =      2.342
+  eval_steps_per_second   =      0.781
+  perplexity              =     1.9107

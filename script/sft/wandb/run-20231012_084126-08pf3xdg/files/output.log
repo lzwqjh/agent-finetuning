@@ -1,0 +1,36 @@
+
+  0%|                                                                                                                                      | 0/15460 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 633, in __next__
+    data = self._next_data()
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1328, in _next_data
+    idx, data = self._get_data()
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1284, in _get_data
+    success, data = self._try_get_data()
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1132, in _try_get_data
+    data = self._data_queue.get(timeout=timeout)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/queue.py", line 180, in get
+    self.not_empty.wait(remaining)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/threading.py", line 324, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "/data/ssd/zqh/LLM-RLHF-Tuning/script/sft/run_sft_with_peft.py", line 229, in <module>
+    main()
+  File "/data/ssd/zqh/LLM-RLHF-Tuning/script/sft/run_sft_with_peft.py", line 207, in main
+    output = trainer.train()
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/transformers/trainer.py", line 1787, in _inner_training_loop
+    for step, inputs in enumerate(epoch_iterator):
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/accelerate/data_loader.py", line 384, in __iter__
+    current_batch = next(dataloader_iter)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 629, in __next__
+    with torch.autograd.profiler.record_function(self._profile_name):
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/autograd/profiler.py", line 507, in __exit__
+    torch.ops.profiler._record_function_exit._RecordFunction(record)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/_ops.py", line 482, in __getattr__
+    overload = OpOverload(self, op_, op_dk_, schema, tags)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/_ops.py", line 268, in __init__
+    continue
+KeyboardInterrupt

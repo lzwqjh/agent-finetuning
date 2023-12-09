@@ -1,0 +1,207 @@
+
+
+  1%|▋                                                                                                                               | 1/177 [00:04<13:46,  4.69s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 56%|███████████████████████████████████████████████████████████████████████                                                        | 99/177 [03:49<03:07,  2.40s/it]
+ 56%|███████████████████████████████████████████████████████████████████████▏                                                      | 100/177 [03:52<03:05,  2.41s/it][INFO|trainer.py:3081] 2023-10-14 00:46:06,228 >> ***** Running Evaluation *****
+[INFO|trainer.py:3083] 2023-10-14 00:46:06,228 >>   Num examples = 20
+[INFO|trainer.py:3086] 2023-10-14 00:46:06,228 >>   Batch size = 1
+{'eval_loss': 4.045259952545166, 'eval_runtime': 1.577, 'eval_samples_per_second': 12.682, 'eval_steps_per_second': 3.171, 'epoch': 1.68}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 99%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████▎| 176/177 [06:37<00:02,  2.11s/it]
+{'train_runtime': 409.7463, 'train_samples_per_second': 13.933, 'train_steps_per_second': 0.432, 'train_loss': 5.855630712994074, 'epoch': 2.97}
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 177/177 [06:39<00:00,  2.08s/it][INFO|trainer.py:1934] 2023-10-14 00:48:52,991 >>
+Training completed. Do not forget to share your model on huggingface.co/models =)
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 177/177 [06:39<00:00,  2.26s/it]
+10/14/2023 00:48:53 - INFO - utils.trainer - Trainer.model is not a `PreTrainedModel`, only saving its state dict.
+***** train metrics *****
+  epoch                    =       2.97
+  train_loss               =     5.8556
+  train_runtime            = 0:06:49.74
+  train_samples_per_second =     13.933
+  train_steps_per_second   =      0.432
+***** eval metrics *****
+  epoch                   =       2.97
+  eval_loss               =     3.5135
+  eval_runtime            = 0:00:01.53
+  eval_samples_per_second =     13.036
+  eval_steps_per_second   =      3.259
+  perplexity              =    33.5655
+[INFO|tokenization_utils_base.py:2210] 2023-10-14 00:48:53,321 >> tokenizer config file saved in sft_model_path/tokenizer_config.json
+[INFO|tokenization_utils_base.py:2217] 2023-10-14 00:48:53,322 >> Special tokens file saved in sft_model_path/special_tokens_map.json
+[INFO|trainer.py:3081] 2023-10-14 00:48:53,330 >> ***** Running Evaluation *****
+[INFO|trainer.py:3083] 2023-10-14 00:48:53,331 >>   Num examples = 20
+[INFO|trainer.py:3086] 2023-10-14 00:48:53,331 >>   Batch size = 1
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 5/5 [00:00<00:00,  8.78it/s]

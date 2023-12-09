@@ -1,0 +1,252 @@
+
+
+  0%|                                                                                                                                                                 | 1/3045 [00:04<3:21:44,  3.98s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  3%|█████▏                                                                                                                                                          | 99/3045 [03:50<1:55:17,  2.35s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  7%|██████████▍                                                                                                                                                    | 200/3045 [07:44<1:51:32,  2.35s/it]
+
+
+
+
+
+
+
+  7%|██████████▊                                                                                                                                                    | 207/3045 [08:00<1:47:35,  2.27s/it]Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x7f30218964d0>
+Traceback (most recent call last):
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1478, in __del__
+    self._shutdown_workers()
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1423, in _shutdown_workers
+    self._worker_result_queue.put((None, None))
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/multiprocessing/queues.py", line 94, in put
+    self._start_thread()
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/multiprocessing/queues.py", line 177, in _start_thread
+    self._thread.start()
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/threading.py", line 940, in start
+    self._started.wait()
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/threading.py", line 607, in wait
+    signaled = self._cond.wait(timeout)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/threading.py", line 320, in wait
+    waiter.acquire()
+KeyboardInterrupt:
+Traceback (most recent call last):
+  File "/data/ssd/zqh/LLM-RLHF-Tuning/script/sft/run_sft_with_peft.py", line 230, in <module>
+    main()
+  File "/data/ssd/zqh/LLM-RLHF-Tuning/script/sft/run_sft_with_peft.py", line 208, in main
+    output = trainer.train()
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/transformers/trainer.py", line 1539, in train
+    return inner_training_loop(
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/transformers/trainer.py", line 1888, in _inner_training_loop
+    self.optimizer.step()
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/accelerate/optimizer.py", line 133, in step
+    self.scaler.step(self.optimizer, closure)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/cuda/amp/grad_scaler.py", line 374, in step
+    retval = self._maybe_opt_step(optimizer, optimizer_state, *args, **kwargs)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/cuda/amp/grad_scaler.py", line 290, in _maybe_opt_step
+    retval = optimizer.step(*args, **kwargs)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/optim/lr_scheduler.py", line 69, in wrapper
+    return wrapped(*args, **kwargs)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/optim/optimizer.py", line 280, in wrapper
+    out = func(*args, **kwargs)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/data/zqh/.conda/envs/sft/lib/python3.10/site-packages/transformers/optimization.py", line 468, in step
+    denom = exp_avg_sq.sqrt().add_(group["eps"])
+KeyboardInterrupt
